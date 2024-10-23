@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-img {
+            width: 100%; /* Set width to 100% of the parent container */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px; /* Optional: add rounded corners */
+        }
+
+        .project-description {
+            display: none; /* Hide description by default */
+        }
+
+        .show-more {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .project {
+            margin-bottom: 20px; /* Space between projects */
+        }
+    </style>
+    <script>
+        function toggleDescription(projectId) {
+            const description = document.getElementById(projectId);
+            const button = document.getElementById(`show-more-button-${projectId}`);
+
+            if (description.style.display === 'none') {
+                description.style.display = 'block';
+                button.innerText = 'Show Less';
+            } else {
+                description.style.display = 'none';
+                button.innerText = 'Show More';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="c:\Users\CHADA SAI MANISH\OneDrive\Desktop\myjdbc tutorial\task.jpg" alt="Your Name" class="profile-img">
+        <h1>CHADA SAI MANISH</h1>
+        <p>Web Developer | DevOps Engineer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here. Include your background, interests, and goals.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <a href="https://link-to-your-project1.com" target="_blank">
+                    <img src="c:\Users\CHADA SAI MANISH\OneDrive\Desktop\myjdbc tutorial\stu.jpg" alt="Project 1" class="project-img">
+                </a>
+                <p>STUDENT DETAILS MANAGEMENT SYSTEM</p>
+                <p class="project-description" id="student-description">
+                    The Student Details Management System is a web application designed to efficiently manage student information, including personal details, academic records, and attendance. Built with a user-friendly interface, it allows administrators and teachers to easily add, update, and retrieve student data, ensuring streamlined communication and improved organization within educational institutions.
+                </p>
+                <span class="show-more" id="show-more-button-student-description" onclick="toggleDescription('student-description')">Show More</span>
+            </div>
+            <div class="project">
+                <a href="https://link-to-your-project2.com" target="_blank">
+                    <img src="C:\Users\CHADA SAI MANISH\OneDrive\Desktop\pic.n\hello.png" alt="Project 2" class="project-img">
+                </a>
+                <p>BILL MANAGEMENT SYSTEM</p>
+                <p class="project-description" id="bill-description">
+                    The Bill Management System is a web application that uses HTML and CSS for the front end, Java for backend logic, and SQL for data management, enabling users to create, track, and manage their bills securely. It features user authentication, bill categorization, and reminders to streamline financial organization.
+                </p>
+                <span class="show-more" id="show-more-button-bill-description" onclick="toggleDescription('bill-description')">Show More</span>
+            </div>
+            <div class="project">
+                <a href="https://link-to-your-project3.com" target="_blank">
+                    <img src="C:\Users\CHADA SAI MANISH\OneDrive\Desktop\pic.n\download.jpeg" alt="Project 3" class="project-img">
+                </a>
+                <p>RECIPE APP</p>
+                <p class="project-description" id="recipe-description">
+                    The Recipe App is a mobile and web application that enables users to explore, create, and share a wide variety of recipes. Featuring a sleek design and intuitive navigation, the app allows users to search for recipes by ingredients, cuisine, or dietary preferences, save their favorites, and even submit their own recipes, fostering a community of cooking enthusiasts and culinary creativity.
+                </p>
+                <span class="show-more" id="show-more-button-recipe-description" onclick="toggleDescription('recipe-description')">Show More</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out through any of the following:</p>
+        <p>Email: <a href="saimanishchada@gmail.com">saimanishchada@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/saimanishchada" target="_blank">https://www.linkedin.com/in/chada-sai-manish-4143ba288</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CHADA SAI MANISH. All rights reserved.</p>
+    </footer>
+</body>
+</html>
